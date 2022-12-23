@@ -4,7 +4,7 @@ var allTextAreas= $('.description')
 
 function displayEvents () {
 //code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements.
+// the values of the corresponding textarea elements.
 for (var i = 9; i <= 17; i++) {
   var savedEvents = localStorage.getItem("hour-" + i)
 $("#hour-" + i + " .description").val(savedEvents)
@@ -17,9 +17,9 @@ $("#hour-" + i + " .description").val(savedEvents)
   var userTime = $(this).parent().attr("id")
   localStorage.setItem(userTime, userInput)
   }
-  //listener for click events on the save button. 
-$(document).ready(function() {
   
+$(document).ready(function() {
+//listener for click events on the save button.   
 saveBtnEl.on('click', saveEvent);
 displayEvents()
 
