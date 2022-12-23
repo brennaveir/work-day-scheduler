@@ -41,5 +41,5 @@ allTextAreas.each(function (){
 })
 //Code to display the current date in the header of the page.
 var displayDate = dayjs()
-$('#currentDay').text(displayDate.format('MMM D, YYYY'));
+$('#currentDay').text(displayDate.format('dddd MMM D, YYYY'));
 });
