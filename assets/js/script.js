@@ -34,9 +34,10 @@ function saveEvent () {
   localStorage.setItem(userTime, userInput)
   };
 // TODO: Add a listener for click events on the save button. 
-  saveBtnEl.on('click', saveEvent);
+$(document).ready(function() {
+  
+saveBtnEl.on('click', saveEvent);
 displayEvents()
-
 
 //TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -61,5 +62,5 @@ allTextAreas.each(function (){
 // TODO: Add code to display the current date in the header of the page.
 var displayDate = dayjs()
 $('#currentDay').text(displayDate.format('MMM D, YYYY'));
-
+});
 // console.log(displayDate)
