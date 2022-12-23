@@ -15,8 +15,10 @@ function displayEvents () {
   //
 for (var i = 9; i <= 17; i++) {
   var savedEvents = localStorage.getItem("hour-" + i)
-var textArea = $(".hour-" + i).val(savedEvents)
+$("#hour-" + i + " .description").val(savedEvents)
+console.log(savedEvents,"hour-" + i )
 }
+
 //!!!!!!!!!!!!!!code not saving to specific time block!!!!!!!!!!!!!!!!!!!!
 }
 //This code should use the id in the containing time-block as a key to save the user input in
@@ -41,7 +43,8 @@ displayEvents()
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
-var currentTime = dayjs().format("HH")
+var currentTime = dayjs().hour()
+console.log(currentTime)
 allTextAreas.each(function (){
   var textAreaTime = $(this).parent().attr("id").split('-')[1]
   if (textAreaTime == currentTime) {
